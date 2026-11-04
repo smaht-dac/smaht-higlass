@@ -1,6 +1,6 @@
 {
   "name": "@smaht-dac/smaht-higlass",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "HiGlass Hi-C / genomic / large data viewer",
   "author": "Peter Kerpedjiev <pkerpedjiev@gmail.com>",
   "main": "dist/hglib.js",

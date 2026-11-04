@@ -4,6 +4,15 @@
 [![Twitter](https://img.shields.io/badge/news-twitter-red.svg?colorB=6930bf)](https://twitter.com/higlass_io)
 [![Slack](https://img.shields.io/badge/join-Slack-red.svg?colorB=ff4000)](https://tinyurl.com/3z3bds4w)
 
+> [!NOTE]
+> This repository is a fork of [HiGlass](https://github.com/higlass/higlass),
+> published on npm as
+> [`@smaht-dac/smaht-higlass`](https://www.npmjs.com/package/@smaht-dac/smaht-higlass).
+> It is based on HiGlass v2.3.5; see [CHANGELOG.md](CHANGELOG.md) for the changes
+> made since. For the original project, use the
+> [upstream repository](https://github.com/higlass/higlass) and the
+> [`higlass`](https://www.npmjs.com/package/higlass) npm package.
+
 
 ### Introduction
 

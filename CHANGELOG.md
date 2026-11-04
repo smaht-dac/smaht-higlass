@@ -1,5 +1,9 @@
 # Release notes
 
+## 2.5.1
+
+- Add a note to the README that this is a fork of HiGlass
+
 ## 2.5.0
 
 - Stop bundling Enzyme and its dependencies, which shrinks `hglib.min.js` by ~28% (~29% gzipped). `mountHGComponent` and `mountHGComponentAsync` are no longer exported from `hglib` or the plugin `utils`; they never worked outside the HiGlass test setup. `waitForTilesLoaded`, `waitForJsonComplete`, `waitForTransitionsFinished`, `changeOptions` and `removeHGComponent` are still exported
