@@ -76,7 +76,7 @@ async function build() {
       lib: {
         entry: path.resolve(__dirname, '../app/scripts/hglib.jsx'),
         name: 'hglib',
-        // Vite defaults to the package name, which is now `smaht-higlass`
+        // Keep the `higlass.*` output names (Vite defaults to the package name)
         fileName: 'higlass',
         formats: ['umd', 'es'],
       },

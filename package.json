@@ -1,5 +1,5 @@
 {
-  "name": "smaht-higlass",
+  "name": "@smaht-dac/smaht-higlass",
   "version": "2.4.0",
   "description": "HiGlass Hi-C / genomic / large data viewer",
   "author": "Peter Kerpedjiev <pkerpedjiev@gmail.com>",
@@ -40,6 +40,9 @@
     "url": "https://github.com/smaht-dac/smaht-higlass"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=0.12.0"
   },
