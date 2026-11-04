@@ -1,0 +1,159 @@
+import React from 'react';
+import HiGlassComponent from './HiGlassComponent';
+import {
+  ensureReady,
+  renderToContainer,
+  unmountFromContainer,
+} from './utils/react-dom-compat';
+
+import HorizontalGeneAnnotationsTrack from './HorizontalGeneAnnotationsTrack';
+// these exports can be used to create new tracks in outside environments (e.g. Observable)
+import SVGTrack from './SVGTrack';
+import TiledPixiTrack from './TiledPixiTrack';
+
+import _CSS from 'virtual:stylesheet';
+
+/** @type {string} */
+const CSS = _CSS;
+
+// Auto-inject styles into document.head for backwards compatibility.
+// Uses a data attribute to prevent duplicate injection.
+if (
+  CSS &&
+  typeof document !== 'undefined' &&
+  !document.querySelector('[data-higlass-styles]')
+) {
+  const style = document.createElement('style');
+  style.setAttribute('data-higlass-styles', '');
+  style.textContent = CSS;
+  document.head.appendChild(style);
+}
+
+export { CSS };
+
+export { default as ChromosomeInfo } from './ChromosomeInfo';
+export { default as HiGlassComponent } from './HiGlassComponent';
+export {
+  default as HiGlassTrackComponent,
+  trackViewer,
+} from './HiGlassTrackComponent';
+
+export const tracks = {
+  SVGTrack,
+  TiledPixiTrack,
+  HorizontalGeneAnnotationsTrack,
+};
+
+export { default as schema } from '../schema.json' with { type: 'json' };
+export { version } from '../../package.json' with { type: 'json' };
+
+/** @import * as api from './api' */
+/** @import * as types from './types' */
+
+/** @typedef {api.HiGlassApi["public"]} HiGlassApi */
+/** @typedef {types.HiGlassOptions} HiGlassOptions */
+/** @typedef {types.HiGlassViewConfig} HiGlassViewConfig */
+
+// export functions that are useful for testing
+export {
+  waitForJsonComplete,
+  waitForTilesLoaded,
+  waitForTransitionsFinished,
+  mountHGComponent,
+} from './test-helpers';
+
+export {
+  debounce,
+  getDefaultTracksForDatatype,
+  getTrackByUid,
+  getTrackObjectFromHGC,
+} from './utils';
+
+export { TRACKS_INFO_BY_TYPE } from './configs';
+export { OPTIONS_INFO } from './options-info';
+/**
+ * Create a `HiGlassComponent` instance.
+ *
+ * @param {HTMLElement} element - The element to attach the HiGlassComponent.
+ * @param {HiGlassViewConfig} config - The view configuration.
+ * @param {HiGlassOptions} [options] - How the component is drawn and and behaves.
+ *
+ * @returns {Promise<HiGlassComponent>}
+ */
+const launch = async (element, config, options = {}) => {
+  await ensureReady();
+  const hgc = await new Promise((resolve) => {
+    renderToContainer(
+      element,
+      <HiGlassComponent
+        ref={(/** @type {HiGlassComponent | null} */ ref) => {
+          // Wait to resolve until React gives us a ref
+          ref && resolve(ref);
+        }}
+        options={options}
+        viewConfig={config}
+      />,
+    );
+  });
+
+  // react-grid-layout v2 uses async useEffect for layout synchronization.
+  // Wait until TiledPlots are rendered (trackRenderer is populated) before
+  // returning, so the component is truly ready to use.
+  const viewUids = Object.keys(hgc.state.views);
+  if (viewUids.length > 0) {
+    await /** @type {Promise<void>} */ (
+      new Promise((resolve) => {
+        const start = performance.now();
+        const check = () => {
+          const allReady = viewUids.every(
+            (uid) => hgc.tiledPlots[uid]?.trackRenderer,
+          );
+          if (allReady || performance.now() - start > 5000) {
+            resolve();
+          } else {
+            setTimeout(check, 16);
+          }
+        };
+        check();
+      })
+    );
+  }
+
+  return hgc;
+};
+
+/**
+ * Create a HiGlass component.
+ *
+ * @param {HTMLElement} element - DOM element to render the HiGlass component.
+ * @param {HiGlassViewConfig | string} viewConfig - The view config to load.
+ * @param {HiGlassOptions} [options] - Additional options for how the HiGlass component is drawn and behaves
+ * @returns  {Promise<HiGlassApi>}  Newly created HiGlass component.
+ *
+ * Note: If `viewConfig` is a string, it will be interpreted as a url from which to retrieve the viewconf.
+ *
+ * @example
+ * ```js
+ * const hgv = hglib.viewer(document.querySelector('#app'), viewconf, {
+ *   bounded: true,
+ *   defaultTrackOptions: {
+ *     all: { showTooltip: true },
+ *     trackSpecific: {
+ *       heatmap: { showTooltip: false }
+ *     }
+ *   }
+ * });
+ * ```
+ */
+export const viewer = async (element, viewConfig, options = {}) => {
+  const hg = await launch(
+    element,
+    typeof viewConfig === 'string'
+      ? await fetch(viewConfig).then((response) => response.json())
+      : viewConfig,
+    options,
+  );
+  return hg.api;
+};
+
+export * as hggos from './gosling-exports';

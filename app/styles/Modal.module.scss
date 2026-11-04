@@ -1,0 +1,58 @@
+@use './colors' as c;
+@use './sizes' as s;
+@use './transitions' as t;
+
+.modal-background {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.666);
+  animation: fade-in t.$normal t.$ease 1;
+  transition: opacity t.$normal t.$ease;
+}
+
+.modal-hide {
+  opacity: 0;
+}
+
+.modal-wrap {
+  position: absolute;
+  top: (2*s.$base)+px;
+  right: (2*s.$base)+px;
+  bottom: (2*s.$base)+px;
+  left: (2*s.$base)+px;
+}
+
+.modal-window {
+  position: relative;
+  width: 100%;
+  max-width: (64*s.$base)+px;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: c.$black;
+  border-radius: (0.5*s.$base)+px;
+  background: c.$white;
+  animation: fade-scale-in t.$normal t.$ease 1;
+}
+
+.modal-window-max-height {
+  height: 100%;
+}
+
+.modal-content {
+  padding: s.$base+px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-scale-in {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}

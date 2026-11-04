@@ -1,0 +1,129 @@
+@use './colors' as c;
+@use './transitions' as t;
+
+.add-track-position-table {
+  border-collapse: collapse;
+  margin: 5px;
+  color: c.$gray-dark;
+}
+
+.add-track-position-table-dark {
+  color: c.$gray-light;
+}
+
+.add-track-position-other {
+  outline: none;
+}
+
+.add-track-position-top-center {
+  min-width: 80px;
+  min-height: 20px;
+  text-align: center;
+  outline: none;
+  border-top: 1px solid c.$gray;
+  border-left: 1px solid c.$gray;
+  border-right: 1px solid c.$gray;
+  border-radius: 2px 2px 0 0;
+
+  &:hover {
+    color: c.$white;
+    background-color: c.$active;
+  }
+}
+
+.add-track-position-middle-left {
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  border-top: 1px solid c.$gray;
+  border-left: 1px solid c.$gray;
+  border-bottom: 1px solid c.$gray;
+  border-radius: 2px 0 0 2px;
+}
+
+.add-track-position-middle-left:hover {
+  background-color: c.$active;
+  color: c.$white;
+}
+
+.add-track-position-middle-right {
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  border-top: 1px solid c.$gray;
+  border-right: 1px solid c.$gray;
+  border-bottom: 1px solid c.$gray;
+  border-radius: 0 2px 2px 0;
+}
+
+.add-track-position-middle-right:hover {
+  background-color: c.$active;
+  color: c.$white;
+}
+
+.add-track-position-middle-middle {
+  text-align: center;
+  outline: none;
+  border: 1px solid c.$gray;
+  position: relative;
+}
+
+.add-track-position-middle-middle:hover {
+  background-color: c.$active;
+  color: c.$white;
+}
+
+.add-track-position-middle-middle-full {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-track-position-middle-middle-upper-right {
+  width: 0;
+  height: 0;
+  border-top: 30px solid c.$gray;
+  border-left: 30px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.add-track-position-middle-middle-upper-right:hover {
+  border-top: 30px solid c.$active;
+}
+
+.add-track-position-middle-middle-lower-left {
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid c.$gray;
+  border-right: 30px solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.add-track-position-middle-middle-lower-left:hover {
+  border-bottom: 30px solid c.$active;
+}
+
+.add-track-position-bottom-middle {
+  min-height: 20px;
+  text-align: center;
+  outline: none;
+  border-left: 1px solid c.$gray;
+  border-right: 1px solid c.$gray;
+  border-bottom: 1px solid c.$gray;
+  border-radius: 0 0 2px 2px;
+}
+
+.add-track-position-bottom-middle:hover {
+  background-color: c.$active;
+  color: c.$white;
+}
+
+.add-track-position-span {
+  margin: 5px;
+}

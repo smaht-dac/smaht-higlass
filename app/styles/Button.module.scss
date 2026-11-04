@@ -1,0 +1,46 @@
+@use './colors' as c;
+@use './sizes' as s;
+@use './transitions' as t;
+
+.button {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.5em 0.5em;
+  color: c.$black;
+  font-size: 1em;
+  line-height: 1em;
+  border: 0;
+  border-radius: (.25*s.$base)+px;
+  background: c.$white;
+  box-shadow: 0 0 0 1px c.$gray-light;
+  transition: transform t.$fast t.$ease,
+              box-shadow t.$fast t.$ease,
+              background t.$fast t.$ease;
+  -webkit-appearance: none;
+}
+
+.button:hover {
+  background: c.$gray-lightest;
+  box-shadow: 0 0 0 1px c.$gray-light;
+}
+
+.button:focus {
+  box-shadow: 0 0 0 2px c.$blue-lighter;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.button:hover, .button:focus, .button:active {
+  cursor: pointer;
+  outline: none;
+}
+
+.button-shortcut {
+  padding: 0.1em (.5*s.$base)+px;
+  color: c.$gray-medium;
+  font-size: 0.8em;
+  transition: color t.$fast t.$ease;
+}
