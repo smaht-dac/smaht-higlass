@@ -1,6 +1,6 @@
 # Release notes
 
-## Unreleased
+## 2.4.0
 
 - Fix tracks not resizing when dragging their resize handle with React 18+ (`createRoot`), where batched `setState` calls caused `DraggableDiv` to report the old size
 - Fix shift + mouse wheel not reaching a 1D track's `zoomedY()` on macOS, where the wheel event only has `deltaX`
