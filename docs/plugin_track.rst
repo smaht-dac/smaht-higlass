@@ -96,6 +96,57 @@ Please visit the `"available to plugins" page <available_to_plugins.html>`_
 for an overview of all available imports that plugin tracks and data fetchers may access.
 
 
+Handling drags and the mouse wheel
+==================================
+
+By default, dragging on a track pans the view and the mouse wheel zooms it.
+A track can react to these interactions by implementing the following
+optional methods. All coordinates are in track pixels, i.e. relative to the
+top-left corner of the track.
+
+``zoomedY(trackY, kMultiplier)``
+  Called for a mouse wheel event with the shift key held over a 1D track
+  (vertical zoom of the value scale). ``kMultiplier`` is ``2 ** (delta / 500)``,
+  where ``delta`` is the event's ``deltaY``, or its ``deltaX`` if ``deltaY``
+  is zero (macOS turns shift + wheel into horizontal scrolling). The view is
+  not zoomed.
+
+``movedY(dY)``
+  Called with the vertical movement when the user drags vertically on a
+  horizontal 1D track (or horizontally on a vertical one).
+
+``capturesPointer(trackX, trackY, event)``
+  Called for ``mousedown``, ``touchstart`` and ``dblclick`` events. Return
+  ``true`` if the track handles the event itself (e.g. a scrollbar that is
+  dragged, or a button), so that HiGlass doesn't start panning or zooming the
+  view. The track then gets the event and the following ones through PIXI
+  interaction, as before.
+
+``wheeled(trackX, trackY, event)``
+  Called for wheel events, e.g. to let the track scroll its content. Return
+  ``true`` if the track handled the event, so that HiGlass doesn't zoom the
+  view (or call ``zoomedY``). The page doesn't scroll either way.
+
+If several tracks are at the event's position (e.g. overlaid tracks), they
+are asked in order until one returns ``true``. A horizontal track that is
+placed on the left or right side of a view passes these calls on to the
+track with ``trackX`` and ``trackY`` swapped, so that they are in the
+track's own (unrotated) coordinates.
+
+.. code-block:: javascript
+
+    capturesPointer(trackX, trackY, event) {
+      // a scrollbar along the right edge of the track
+      return trackX >= this.dimensions[0] - SCROLLBAR_WIDTH;
+    }
+
+    wheeled(trackX, trackY, event) {
+      if (!event.altKey) return false;
+      this.scrollBy(event.deltaY);
+      return true;
+    }
+
+
 Displaying custom data modals
 =============================
 

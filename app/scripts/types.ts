@@ -153,6 +153,14 @@ export interface TrackObject {
   remove(): void;
   movedY(extent: number): void;
   zoomedY(yPosition: number, wheelDelta: number): void;
+  /** Whether the track handles this pointer event itself (no pan or zoom). */
+  capturesPointer?(
+    trackX: number,
+    trackY: number,
+    event: MouseEvent | TouchEvent,
+  ): boolean;
+  /** Whether the track handled this wheel event itself (no zoom). */
+  wheeled?(trackX: number, trackY: number, event: WheelEvent): boolean;
   fetching?: Set<unknown>;
   tilesetInfo?: TilesetInfo;
   chromInfo?: unknown; // TODO

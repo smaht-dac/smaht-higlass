@@ -1926,7 +1926,7 @@ export class TiledPlot extends React.Component {
           ? [null, null]
           : prevState.rangeSelection.slice();
 
-        const accessor = !this.state.is1dRangeSelection && axis === 'y' ? 1 : 0;
+        const accessor = !prevState.is1dRangeSelection && axis === 'y' ? 1 : 0;
 
         let dataPos = this.rangeViewToDataLoci(range, scale);
 

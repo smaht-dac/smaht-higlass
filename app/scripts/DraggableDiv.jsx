@@ -66,11 +66,13 @@ class DraggableDiv extends React.Component {
   }
 
   UNSAFE_componentWillReceiveProps(newProps) {
-    if ('width' in newProps) {
+    // Only sync with props that actually changed, so that a re-render with
+    // the old size (e.g. during a drag) doesn't reset the size being dragged.
+    if (newProps.width !== this.props.width) {
       this.setState({ width: newProps.width });
     }
 
-    if ('height' in newProps) {
+    if (newProps.height !== this.props.height) {
       this.setState({ height: newProps.height });
     }
   }
@@ -83,10 +85,12 @@ class DraggableDiv extends React.Component {
     let newHeight = this.dragStartHeight + (ms[1] - this.dragStartMousePos[1]);
     newHeight = newHeight > this.minHeight ? newHeight : this.minHeight;
 
-    this.setState({ height: newHeight });
+    const newState = { height: newHeight };
+
+    this.setState(newState);
 
     event.sourceEvent.stopPropagation();
-    this.sizeChanged();
+    this.sizeChanged(newState);
   }
 
   dragLeftFunc(event) {
@@ -101,13 +105,15 @@ class DraggableDiv extends React.Component {
         ? newLeft
         : this.dragStartLeft + this.dragStartWidth - this.minWidth;
 
-    this.setState({
+    const newState = {
       left: newLeft,
       width: newWidth,
-    });
+    };
+
+    this.setState(newState);
 
     event.sourceEvent.stopPropagation();
-    this.sizeChanged();
+    this.sizeChanged(newState);
   }
 
   dragTopFunc(event) {
@@ -122,13 +128,15 @@ class DraggableDiv extends React.Component {
         ? newTop
         : this.dragStartTop + this.dragStartHeight - this.minHeight;
 
-    this.setState({
+    const newState = {
       top: newTop,
       height: newHeight,
-    });
+    };
+
+    this.setState(newState);
 
     event.sourceEvent.stopPropagation();
-    this.sizeChanged();
+    this.sizeChanged(newState);
   }
 
   dragRightFunc(event) {
@@ -137,12 +145,14 @@ class DraggableDiv extends React.Component {
     let newWidth = this.dragStartWidth + (ms[0] - this.dragStartMousePos[0]);
     newWidth = newWidth > this.minWidth ? newWidth : this.minWidth;
 
-    this.setState({
+    const newState = {
       width: newWidth,
-    });
+    };
+
+    this.setState(newState);
 
     event.sourceEvent.stopPropagation();
-    this.sizeChanged();
+    this.sizeChanged(newState);
   }
 
   dragBottomLeftFunc(event) {
@@ -160,14 +170,16 @@ class DraggableDiv extends React.Component {
         ? newLeft
         : this.dragStartLeft + this.dragStartWidth - this.minWidth;
 
-    this.setState({
+    const newState = {
       left: newLeft,
       width: newWidth,
       height: newHeight,
-    });
+    };
+
+    this.setState(newState);
 
     event.sourceEvent.stopPropagation();
-    this.sizeChanged();
+    this.sizeChanged(newState);
   }
 
   dragBottomRightFunc(event) {
@@ -179,13 +191,15 @@ class DraggableDiv extends React.Component {
     let newHeight = this.dragStartHeight + (ms[1] - this.dragStartMousePos[1]);
     newHeight = newHeight > this.minHeight ? newHeight : this.minHeight;
 
-    this.setState({
+    const newState = {
       width: newWidth,
       height: newHeight,
-    });
+    };
+
+    this.setState(newState);
 
     event.sourceEvent.stopPropagation();
-    this.sizeChanged();
+    this.sizeChanged(newState);
   }
 
   dragTopRightFunc(event) {
@@ -203,14 +217,16 @@ class DraggableDiv extends React.Component {
     let newWidth = this.dragStartWidth + (ms[0] - this.dragStartMousePos[0]);
     newWidth = newWidth > this.minWidth ? newWidth : this.minWidth;
 
-    this.setState({
+    const newState = {
       top: newTop,
       width: newWidth,
       height: newHeight,
-    });
+    };
+
+    this.setState(newState);
 
     event.sourceEvent.stopPropagation();
-    this.sizeChanged();
+    this.sizeChanged(newState);
   }
 
   dragTopLeftFunc(event) {
@@ -234,16 +250,18 @@ class DraggableDiv extends React.Component {
         ? newTop
         : this.dragStartTop + this.dragStartHeight - this.minHeight;
 
-    this.setState({
+    const newState = {
       top: newTop,
       left: newLeft,
       width: newWidth,
       height: newHeight,
-    });
+    };
+
+    this.setState(newState);
 
     event.sourceEvent.stopPropagation();
 
-    this.sizeChanged();
+    this.sizeChanged(newState);
   }
 
   dragStart(event) {
@@ -258,9 +276,16 @@ class DraggableDiv extends React.Component {
     event.sourceEvent.stopPropagation();
   }
 
-  sizeChanged() {
+  /**
+   * Report the new size to the parent.
+   *
+   * `newState` is passed explicitly rather than read from `this.state`
+   * because with React 18's `createRoot`, `setState` calls in native (d3-drag)
+   * event handlers are batched, so `this.state` would still hold the old size.
+   */
+  sizeChanged(newState) {
     if (this.props.sizeChanged) {
-      this.props.sizeChanged(this.state);
+      this.props.sizeChanged({ ...this.state, ...newState });
     }
   }
 

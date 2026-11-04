@@ -1,5 +1,11 @@
 # Release notes
 
+## Unreleased
+
+- Fix tracks not resizing when dragging their resize handle with React 18+ (`createRoot`), where batched `setState` calls caused `DraggableDiv` to report the old size
+- Fix shift + mouse wheel not reaching a 1D track's `zoomedY()` on macOS, where the wheel event only has `deltaX`
+- Add the optional track methods `capturesPointer()` and `wheeled()`, which let a track take a drag or wheel event at a position (e.g. for a scrollbar) so that HiGlass doesn't pan or zoom the view
+
 ## 2.3.5
 
 - Fix crash in `BedLikeTrack` when `colorEncoding` is `itemRgb` and a BED field contains a gene name with commas, which was mistakenly interpreted as an RGB value

@@ -31,5 +31,31 @@ export default ({ mode }) => ({
       // Custom server-side commands exposed to the front end http://vitest.dev/guide/browser/commands#custom-commands
       commands: commands,
     },
+    projects: [
+      {
+        extends: true,
+        test: {
+          name: 'react17',
+          provide: { reactMajor: '17' },
+        },
+      },
+      {
+        // Tests that also run with React 18, where `viewer()` mounts with
+        // `createRoot` (automatic batching), like it does for library users.
+        extends: true,
+        cacheDir: 'node_modules/.vite-react18',
+        resolve: {
+          alias: {
+            react: 'react-18',
+            'react-dom': 'react-dom-18',
+          },
+        },
+        test: {
+          name: 'react18',
+          provide: { reactMajor: '18' },
+          include: ['test/track-resize.test.js'],
+        },
+      },
+    ],
   },
 });

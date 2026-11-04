@@ -215,6 +215,15 @@ class LeftTrackModifier {
     this.originalTrack.movedY(dY);
   }
 
+  // The original track is drawn rotated, so its x and y are swapped
+  capturesPointer(trackX, trackY, event) {
+    return Boolean(this.originalTrack.capturesPointer?.(trackY, trackX, event));
+  }
+
+  wheeled(trackX, trackY, event) {
+    return Boolean(this.originalTrack.wheeled?.(trackY, trackX, event));
+  }
+
   refScalesChanged(refXScale, refYScale) {
     this.originalTrack.refScalesChanged(refYScale, refXScale);
   }

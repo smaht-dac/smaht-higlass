@@ -313,7 +313,18 @@ export class TrackRenderer extends React.Component {
           if (event.target.classList.contains('react-resizable-handle')) {
             return false;
           }
-          return true;
+          return !this.isEventTakenByTrack(event);
+        })
+        .wheelDelta((event) => {
+          // macOS (and some browsers elsewhere) turn shift + wheel into
+          // horizontal scrolling (deltaX only); shift + wheel zooms the value
+          // scale (zoomedY)
+          const delta = event.deltaY || (event.shiftKey ? event.deltaX : 0);
+          return (
+            -delta *
+            (event.deltaMode === 1 ? 0.05 : event.deltaMode ? 1 : 0.002) *
+            (event.ctrlKey ? 10 : 1)
+          );
         })
         .on('start', this.zoomStartedBound)
         .on('zoom', this.zoomedBound)
@@ -1567,6 +1578,48 @@ export class TrackRenderer extends React.Component {
     }
 
     return foundTracks;
+  }
+
+  /**
+   * Whether a track at the event's position handles the event itself, so that
+   * the zoom behavior should ignore it. Asks the tracks' optional
+   * `wheeled()` (for wheel events) or `capturesPointer()` (for mousedown,
+   * touchstart and dblclick) methods, with track pixel coordinates.
+   *
+   * @param {Event} event
+   * @returns {boolean}
+   */
+  isEventTakenByTrack(event) {
+    /** @type {'wheeled' | 'capturesPointer'} */
+    let method;
+    if (event.type === 'wheel') {
+      method = 'wheeled';
+    } else if (
+      event.type === 'mousedown' ||
+      event.type === 'touchstart' ||
+      event.type === 'dblclick'
+    ) {
+      method = 'capturesPointer';
+    } else {
+      return false;
+    }
+
+    // A TouchEvent has no position of its own
+    const source =
+      'touches' in event
+        ? /** @type {TouchEvent} */ (event).touches[0]
+        : /** @type {MouseEvent} */ (event);
+    if (!source) return false;
+
+    const [x, y] = pointer(source, this.currentProps.canvasElement);
+
+    return this.getTracksAtPosition(x, y).some((track) =>
+      Boolean(
+        /** @type {((x: number, y: number, e: Event) => boolean) | undefined} */ (
+          track[method]
+        )?.call(track, x - track.position[0], y - track.position[1], event),
+      ),
+    );
   }
 
   /** @param {import('d3-zoom').D3ZoomEvent<HTMLElement, unknown>=} event */
