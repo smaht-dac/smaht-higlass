@@ -41,14 +41,14 @@ describe('Horizontal heatmaps', () => {
 const zoomLimitViewConf = {
   editable: true,
   zoomFixed: false,
-  trackSourceServers: ['/api/v1', 'http://higlass.io/api/v1'],
+  trackSourceServers: ['/api/v1', 'https://higlass.io/api/v1'],
   exportViewUrl: '/api/v1/viewconfs/',
   views: [
     {
       tracks: {
         top: [
           {
-            server: 'http://higlass.io/api/v1',
+            server: 'https://higlass.io/api/v1',
             tilesetUid: 'D_8CofpyQoCqDqeA-A6A4g',
             uid: 'tt',
             type: 'horizontal-heatmap',

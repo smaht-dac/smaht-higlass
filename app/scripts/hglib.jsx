@@ -55,12 +55,12 @@ export { version } from '../../package.json' with { type: 'json' };
 /** @typedef {types.HiGlassViewConfig} HiGlassViewConfig */
 
 // export functions that are useful for testing
+// (only the Enzyme-free helpers, so that Enzyme isn't bundled)
 export {
   waitForJsonComplete,
   waitForTilesLoaded,
   waitForTransitionsFinished,
-  mountHGComponent,
-} from './test-helpers';
+} from './test-helpers/wait-helpers';
 
 export {
   debounce,

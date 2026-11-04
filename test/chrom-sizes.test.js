@@ -43,7 +43,7 @@ describe('Chromsizes tests', () => {
 const viewconf = {
   editable: true,
   zoomFixed: false,
-  trackSourceServers: ['/api/v1', 'http://higlass.io/api/v1'],
+  trackSourceServers: ['/api/v1', 'https://higlass.io/api/v1'],
   exportViewUrl: '/api/v1/viewconfs/',
   views: [
     {
@@ -58,7 +58,7 @@ const viewconf = {
               {
                 name: 'Chromosome Grid',
                 created: '2018-09-19T14:10:50.358616Z',
-                server: 'http://higlass.io/api/v1',
+                server: 'https://higlass.io/api/v1',
                 tilesetUid: 'f2FZsbCBTbyIx7A-xiRq5Q',
                 uid: 'Mw2aWH9TTcu38t5OZlCYyA',
                 type: '2d-chromosome-grid',
@@ -96,8 +96,8 @@ const viewconf = {
       uid: 'CU_JcrfjS1WAtkA_B_FgJA',
       genomePositionSearchBoxVisible: false,
       genomePositionSearchBox: {
-        autocompleteServer: 'http://higlass.io/api/v1',
-        chromInfoServer: 'http://higlass.io/api/v1',
+        autocompleteServer: 'https://higlass.io/api/v1',
+        chromInfoServer: 'https://higlass.io/api/v1',
         visible: false,
         chromInfoId: 'dm6',
         autocompleteId: 'B2skqtzdSLyWYPTYM8t8lQ',

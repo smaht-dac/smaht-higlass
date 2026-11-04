@@ -16,7 +16,7 @@
         "bottom": [],
         "top": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "F2vbUeqhS86XkxuO1j2rPA",
             "type": "horizontal-line",
             "options": {
@@ -31,7 +31,7 @@
             "uid": "hline1"
           },
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "F2vbUeqhS86XkxuO1j2rPA",
             "type": "horizontal-bar",
             "options": {
@@ -48,7 +48,7 @@
           {
             "uid": "N5Ylzin9TLGToeJs3BKVLA",
             "tilesetUid": "CQMd6V_cRw6iCI_-Unl3PQ",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "width": 1007,
             "height": 130,
             "type": "horizontal-heatmap",
@@ -68,7 +68,7 @@
         ],
         "left": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "F2vbUeqhS86XkxuO1j2rPA",
             "type": "vertical-bar",
             "options": {
@@ -84,7 +84,7 @@
           {
             "uid": "N5Y",
             "tilesetUid": "CQMd6V_cRw6iCI_-Unl3PQ",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "width": 130,
             "height": 230,
             "type": "vertical-heatmap",
@@ -110,7 +110,7 @@
             "height": 1088,
             "contents": [
               {
-                "server": "http://higlass.io/api/v1",
+                "server": "https://higlass.io/api/v1",
                 "tilesetUid": "B2LevKBtRNiCMX372rRPLQ",
                 "uid": "heatmap3",
                 "type": "heatmap",
@@ -145,7 +145,7 @@
     "locksByViewUid": {},
     "locksDict": {}
   },
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "locationLocks": {
     "locksByViewUid": {
       "aa": "OVICp__mSY28et2KqFyBFg",

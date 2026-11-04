@@ -40,7 +40,7 @@ describe('View manipulation tests', () => {
   describe('Viewport projection tests', () => {
     beforeAll(async () => {
       const response = await fetch(
-        'http://higlass.io/api/v1/viewconfs/?d=KaeBVQQpTaqT0kfhE32boQ',
+        'https://higlass.io/api/v1/viewconfs/?d=KaeBVQQpTaqT0kfhE32boQ',
       );
       const viewconf = await response.json();
       [div, hgc] = await mountHGComponentAsync(div, hgc, viewconf, {
@@ -75,7 +75,7 @@ describe('View manipulation tests', () => {
 
 const valueScaleLocksConf = {
   editable: true,
-  trackSourceServers: ['/api/v1', 'http://higlass.io/api/v1'],
+  trackSourceServers: ['/api/v1', 'https://higlass.io/api/v1'],
   exportViewUrl: '/api/v1/viewconfs',
   views: [
     {
@@ -86,7 +86,7 @@ const valueScaleLocksConf = {
             type: 'combined',
             contents: [
               {
-                server: 'http://higlass.io/api/v1',
+                server: 'https://higlass.io/api/v1',
                 tilesetUid: 'D_8CofpyQoCqDqeA-A6A4g',
                 uid: 'M2cJVMQBQ_aoJm1iarEi4g',
                 type: 'heatmap',
@@ -150,7 +150,7 @@ const valueScaleLocksConf = {
             type: 'combined',
             contents: [
               {
-                server: 'http://higlass.io/api/v1',
+                server: 'https://higlass.io/api/v1',
                 tilesetUid: 'D_8CofpyQoCqDqeA-A6A4g',
                 uid: 'M2cJVMQBQ_aoJm1iarEi4g',
                 type: 'heatmap',

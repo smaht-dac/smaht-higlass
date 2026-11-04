@@ -1,7 +1,7 @@
 {
   "editable": true,
   "zoomFixed": false,
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "views": [
     {
       "uid": "a",
@@ -25,7 +25,7 @@
             "height": 200,
             "contents": [
               {
-                "server": "http://higlass.io/api/v1",
+                "server": "https://higlass.io/api/v1",
                 "tilesetUid": "CQMd6V_cRw6iCI_-Unl3PQ",
                 "uid": "heatmap1",
                 "type": "heatmap"

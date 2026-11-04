@@ -51,5 +51,5 @@
   ],
   "editable": true,
   "exportViewUrl": "/api/v1/viewconfs",
-  "trackSourceServers": ["http://higlass.io/api/v1"]
+  "trackSourceServers": ["https://higlass.io/api/v1"]
 }

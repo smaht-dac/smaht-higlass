@@ -2,16 +2,16 @@
   "editable": true,
   "zoomFixed": false,
   "trackSourceServers": [
-    "http://higlass.io/api/v1",
+    "https://higlass.io/api/v1",
     "http://127.0.0.1:8989/api/v1"
   ],
-  "exportViewUrl": "http://higlass.io/api/v1/viewconfs/",
+  "exportViewUrl": "https://higlass.io/api/v1/viewconfs/",
   "views": [
     {
       "uid": "view2",
       "initialXDomain": [-1521535012.049488, 4253785557.7320385],
       "initialYDomain": [-1074275219.9894483, 5601783420.308463],
-      "autocompleteSource": "http://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
+      "autocompleteSource": "https://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
       "genomePositionSearchBoxVisible": false,
       "chromInfoPath": "//s3.amazonaws.com/pkerp/data/hg19/chromSizes.tsv",
       "tracks": {
@@ -28,7 +28,7 @@
             "height": 36
           },
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
             "uid": "ElEL52SpQiWEtxaa5X4NhA",
             "type": "horizontal-gene-annotations",
@@ -53,7 +53,7 @@
         ],
         "left": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
             "uid": "L5FM6--PTeaof462uQB0ww",
             "type": "vertical-gene-annotations",

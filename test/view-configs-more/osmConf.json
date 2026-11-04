@@ -1,7 +1,7 @@
 {
   "editable": true,
   "zoomFixed": false,
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "exportViewUrl": "/api/v1/viewconfs",
   "views": [
     {
@@ -9,9 +9,9 @@
       "initialXDomain": [936467263.9009547, 937119339.4135379],
       "autocompleteSource": "/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
       "genomePositionSearchBox": {
-        "autocompleteServer": "http://higlass.io/api/v1",
+        "autocompleteServer": "https://higlass.io/api/v1",
         "autocompleteId": "OHJakQICQD6gTD7skx4EWA",
-        "chromInfoServer": "http://higlass.io/api/v1",
+        "chromInfoServer": "https://higlass.io/api/v1",
         "chromInfoId": "hg19",
         "visible": false
       },

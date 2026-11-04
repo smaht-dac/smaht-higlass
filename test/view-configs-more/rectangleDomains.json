@@ -2,7 +2,7 @@
   "editable": true,
   "zoomFixed": false,
   "trackSourceServers": [
-    "http://higlass.io/api/v1",
+    "https://higlass.io/api/v1",
     "http://localhost:8989/api/v1"
   ],
   "exportViewUrl": "http://localhost:8000/api/v1/viewconfs/",
@@ -10,7 +10,7 @@
     {
       "uid": "aa",
       "initialXDomain": [0, 3000000000],
-      "autocompleteSource": "http://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
+      "autocompleteSource": "https://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
       "genomePositionSearchBoxVisible": true,
       "chromInfoPath": "//s3.amazonaws.com/pkerp/data/hg19/chromSizes.tsv",
       "tracks": {
@@ -23,7 +23,7 @@
             "height": 1088,
             "contents": [
               {
-                "server": "http://higlass.io/api/v1",
+                "server": "https://higlass.io/api/v1",
                 "tilesetUid": "CQMd6V_cRw6iCI_-Unl3PQ",
                 "type": "heatmap",
                 "position": "center",
@@ -56,7 +56,7 @@
                 "height": 1088
               },
               {
-                "server": "http://higlass.io/api/v1",
+                "server": "https://higlass.io/api/v1",
                 "tilesetUid": "WleVFSK7RIWx2EeptrbPBA",
                 "uid": "rectangles1",
                 "type": "2d-rectangle-domains",

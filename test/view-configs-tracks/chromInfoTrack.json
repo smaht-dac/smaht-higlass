@@ -1,5 +1,5 @@
 {
-  "server": "http://higlass.io/api/v1",
+  "server": "https://higlass.io/api/v1",
   "tilesetUid": "N12wVGG9SPiTkk03yUayUw",
   "type": "horizontal-chromosome-labels",
   "position": "top",

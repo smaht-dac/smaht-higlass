@@ -356,15 +356,15 @@ describe('BedLikeTrack |', () => {
   const viewConf = {
     editable: true,
     zoomFixed: false,
-    trackSourceServers: ['http://higlass.io/api/v1'],
-    exportViewUrl: 'http://higlass.io/api/v1/viewconfs/',
+    trackSourceServers: ['https://higlass.io/api/v1'],
+    exportViewUrl: 'https://higlass.io/api/v1/viewconfs/',
     views: [
       {
         uid: 'aa',
         initialXDomain: [1585110207.2930722, 1586490384.5429244],
         initialYDomain: [1187975248, 1187975248],
         autocompleteSource:
-          'http://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&',
+          'https://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&',
         genomePositionSearchBoxVisible: false,
         chromInfoPath: '//s3.amazonaws.com/pkerp/data/hg19/chromSizes.tsv',
         tracks: {
@@ -631,8 +631,8 @@ describe('BedLikeTrack |', () => {
           static: false,
         },
         genomePositionSearchBox: {
-          autocompleteServer: 'http://higlass.io/api/v1',
-          chromInfoServer: 'http://higlass.io/api/v1',
+          autocompleteServer: 'https://higlass.io/api/v1',
+          chromInfoServer: 'https://higlass.io/api/v1',
           visible: true,
           chromInfoId: 'hg19',
           autocompleteId: 'OHJakQICQD6gTD7skx4EWA',

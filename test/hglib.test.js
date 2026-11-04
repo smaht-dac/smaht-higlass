@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 
 import * as hglib from '../app/scripts/hglib';
 
-import { waitForTilesLoaded } from '../app/scripts/test-helpers/test-helpers';
+import { waitForTilesLoaded } from '../app/scripts/test-helpers';
 
 describe('viewer', () => {
   it('viewer accepts and loads a remote URL', async () => {
@@ -16,7 +16,7 @@ describe('viewer', () => {
     document.body.append(div);
     const promise = hglib.viewer(
       div,
-      'http://higlass.io/api/v1/viewconfs/?d=default',
+      'https://higlass.io/api/v1/viewconfs/?d=default',
       { bounded: true },
     );
     expect(promise).toBeInstanceOf(Promise);

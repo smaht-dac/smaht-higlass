@@ -8,7 +8,7 @@
       "tracks": {
         "top": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
             "uid": "genes-top",
             "type": "horizontal-gene-annotations"
@@ -21,7 +21,7 @@
         ],
         "left": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
             "uid": "genes-left",
             "type": "vertical-gene-annotations"

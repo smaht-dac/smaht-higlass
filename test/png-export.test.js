@@ -11,7 +11,7 @@ describe('PNG Export', () => {
   describe('tests', () => {
     beforeEach(async () => {
       const response = await fetch(
-        'http://higlass.io/api/v1/viewconfs/?d=Y7FtjugjR6OIV_P2DRqCSg',
+        'https://higlass.io/api/v1/viewconfs/?d=Y7FtjugjR6OIV_P2DRqCSg',
       );
       [div, api] = await createElementAndApi(await response.json());
     });

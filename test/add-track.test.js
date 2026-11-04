@@ -50,13 +50,13 @@ describe('Add track(s)', () => {
   it('should select one plot type and double click', async () => {
     const { tilesetFinder } = hgc.instance().modalRef;
     tilesetFinder.handleSelectedOptions([
-      'http://higlass.io/api/v1/CQMd6V_cRw6iCI_-Unl3PQ',
+      'https://higlass.io/api/v1/CQMd6V_cRw6iCI_-Unl3PQ',
     ]);
     hgc.update();
 
     tilesetFinder.props.onDoubleClick(
       tilesetFinder.state.options[
-        'http://higlass.io/api/v1/CQMd6V_cRw6iCI_-Unl3PQ'
+        'https://higlass.io/api/v1/CQMd6V_cRw6iCI_-Unl3PQ'
       ],
     );
 
@@ -78,8 +78,8 @@ describe('Add track(s)', () => {
     const { tilesetFinder } = hgc.instance().modalRef;
 
     tilesetFinder.handleSelectedOptions([
-      'http://higlass.io/api/v1/TO3D5uHjSt6pyDPEpc1hpA',
-      'http://higlass.io/api/v1/Nn8aA4qbTnmaa-oGGbuE-A',
+      'https://higlass.io/api/v1/TO3D5uHjSt6pyDPEpc1hpA',
+      'https://higlass.io/api/v1/Nn8aA4qbTnmaa-oGGbuE-A',
     ]);
 
     hgc.update();
@@ -102,8 +102,8 @@ describe('Add track(s)', () => {
     const { tilesetFinder } = hgc.instance().modalRef;
 
     tilesetFinder.handleSelectedOptions([
-      'http://higlass.io/api/v1/CQMd6V_cRw6iCI_-Unl3PQ',
-      'http://higlass.io/api/v1/GUm5aBiLRCyz2PsBea7Yzg',
+      'https://higlass.io/api/v1/CQMd6V_cRw6iCI_-Unl3PQ',
+      'https://higlass.io/api/v1/GUm5aBiLRCyz2PsBea7Yzg',
     ]);
 
     hgc.update();
@@ -113,8 +113,8 @@ describe('Add track(s)', () => {
     expect(ptc.AVAILABLE_TRACK_TYPES.length).to.eql(0);
 
     tilesetFinder.handleSelectedOptions([
-      'http://higlass.io/api/v1/NNlxhMSCSnCaukAtdoKNXw',
-      'http://higlass.io/api/v1/GGKJ59R-RsKtwgIgFohOhA',
+      'https://higlass.io/api/v1/NNlxhMSCSnCaukAtdoKNXw',
+      'https://higlass.io/api/v1/GGKJ59R-RsKtwgIgFohOhA',
     ]);
 
     hgc.update();
@@ -127,7 +127,7 @@ describe('Add track(s)', () => {
 
     tilesetFinder.handleSelectedOptions([
       // hg19 gene track
-      'http://higlass.io/api/v1/OHJakQICQD6gTD7skx4EWA',
+      'https://higlass.io/api/v1/OHJakQICQD6gTD7skx4EWA',
     ]);
 
     hgc.update();
@@ -139,9 +139,9 @@ describe('Add track(s)', () => {
 
     tilesetFinder.handleSelectedOptions([
       // hg19 gene track
-      'http://higlass.io/api/v1/OHJakQICQD6gTD7skx4EWA',
+      'https://higlass.io/api/v1/OHJakQICQD6gTD7skx4EWA',
       // GM12878-E116-H3K27me3.fc.signal track
-      'http://higlass.io/api/v1/PdAaSdibTLK34hCw7ubqKA',
+      'https://higlass.io/api/v1/PdAaSdibTLK34hCw7ubqKA',
     ]);
 
     hgc.update();
@@ -179,7 +179,7 @@ describe('Add track(s)', () => {
 
     tilesetFinder.handleSelectedOptions([
       // DM6 gene track
-      'http://higlass.io/api/v1/B2skqtzdSLyWYPTYM8t8lQ',
+      'https://higlass.io/api/v1/B2skqtzdSLyWYPTYM8t8lQ',
     ]);
 
     const { plotTypeChooser } = hgc.instance().modalRef;
@@ -218,7 +218,7 @@ describe('Add track(s)', () => {
 
     tilesetFinder.handleSelectedOptions([
       // hg19 gm12878 heatmap
-      'http://higlass.io/api/v1/CQMd6V_cRw6iCI_-Unl3PQ',
+      'https://higlass.io/api/v1/CQMd6V_cRw6iCI_-Unl3PQ',
     ]);
 
     const { plotTypeChooser } = hgc.instance().modalRef;
@@ -265,7 +265,7 @@ describe('Add track(s)', () => {
 
     tilesetFinder.handleSelectedOptions([
       // hg19 gene track
-      'http://higlass.io/api/v1/OHJakQICQD6gTD7skx4EWA',
+      'https://higlass.io/api/v1/OHJakQICQD6gTD7skx4EWA',
     ]);
 
     const { plotTypeChooser } = hgc.instance().modalRef;

@@ -1,7 +1,7 @@
 {
   "editable": true,
   "zoomFixed": false,
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "views": [
     {
       "uid": "a",
@@ -12,7 +12,7 @@
           {
             "type": "horizontal-line",
             "tilesetUid": "e0DYtZBSTqiMLHoaimsSpg",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "uid": "h-line",
             "height": 60,
             "options": {
@@ -24,7 +24,7 @@
           {
             "type": "vertical-line",
             "tilesetUid": "e0DYtZBSTqiMLHoaimsSpg",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "uid": "v-line",
             "width": 60,
             "options": {
@@ -34,7 +34,7 @@
         ],
         "center": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "CQMd6V_cRw6iCI_-Unl3PQ",
             "type": "heatmap",
             "position": "center",

@@ -5,7 +5,6 @@ export {
   waitForTransitionsFinished,
   waitForScalesStabilized,
   waitForComponentReady,
-  mountHGComponent,
-  mountHGComponentAsync,
   removeHGComponent,
-} from './test-helpers';
+} from './wait-helpers';
+export { mountHGComponent, mountHGComponentAsync } from './test-helpers';

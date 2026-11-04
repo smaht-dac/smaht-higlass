@@ -94,8 +94,6 @@ describe('Plugin track tests', () => {
       'min',
       'minNonZero',
       'mod',
-      'mountHGComponent',
-      'mountHGComponentAsync',
       'ndarrayAssign',
       'ndarrayFlatten',
       'ndarrayToList',

@@ -32,7 +32,7 @@
       "initialYDomain": [464701481.41130954, 466207916.449115]
     }
   ],
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "locationLocks": {
     "locksByViewUid": {},
     "locksDict": {}
@@ -41,7 +41,7 @@
     "locksByViewUid": {},
     "locksDict": {}
   },
-  "exportViewUrl": "http://higlass.io/api/v1/viewconfs",
+  "exportViewUrl": "https://higlass.io/api/v1/viewconfs",
   "valueScaleLocks": {
     "locksByViewUid": {},
     "locksDict": {}

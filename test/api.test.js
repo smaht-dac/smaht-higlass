@@ -398,7 +398,7 @@ describe('API Tests', () => {
         datatype: 'vector',
         name: 'wgEncodeLicrHistoneLiverH3k27acMAdult8wksC57bl6StdSig.hitile',
         coordSystem: 'mm9',
-        server: 'http://higlass.io/api/v1',
+        server: 'https://higlass.io/api/v1',
         tilesetUid: 'DLtSFl7jRI6m4eqbU7sCQg',
         type: 'horizontal-line',
       };
@@ -421,7 +421,7 @@ describe('API Tests', () => {
         datatype: 'vector',
         name: 'wgEncodeLicrHistoneLiverH3k27acMAdult8wksC57bl6StdSig.hitile',
         coordSystem: 'mm9',
-        server: 'http://higlass.io/api/v1',
+        server: 'https://higlass.io/api/v1',
         tilesetUid: 'DLtSFl7jRI6m4eqbU7sCQg',
         type: 'horizontal-line',
       };

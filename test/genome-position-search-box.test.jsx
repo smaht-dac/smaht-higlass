@@ -161,7 +161,7 @@ describe('Genome position search box tests', () => {
       const viewUid = 'aa';
       const position = 'top';
       const newTrack = {
-        server: 'http://higlass.io/api/v1',
+        server: 'https://higlass.io/api/v1',
         tilesetUid: 'GUm5aBiLRCyz2PsBea7Yzg',
         uid: 'e8H0Eve5TRWlc6XymPQejg',
         type: 'horizontal-gene-annotations',
@@ -232,7 +232,7 @@ describe('Genome position search box tests', () => {
       hgc.instance().handleCloseTrack('aa', chromInfoTrack.uid);
 
       const newTrack = {
-        server: 'http://higlass.io/api/v1',
+        server: 'https://higlass.io/api/v1',
         tilesetUid: 'NyITQvZsS_mOFNlz5C2LJg',
         uid: 'hcl1',
         type: 'horizontal-chromosome-labels',

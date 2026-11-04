@@ -20,7 +20,7 @@ describe('json', () => {
   it('handles json callback', () =>
     new Promise((done) => {
       tileProxy.json(
-        'http://higlass.io/api/v1/available-chrom-sizes/',
+        'https://higlass.io/api/v1/available-chrom-sizes/',
         (_, jsonResponse) => {
           expect(Object.keys(jsonResponse)).to.eql(['count', 'results']);
           done(null);
@@ -38,7 +38,7 @@ describe('text', () => {
   it('handles text callback', () =>
     new Promise((done) => {
       tileProxy.text(
-        'http://higlass.io/api/v1/available-chrom-sizes/',
+        'https://higlass.io/api/v1/available-chrom-sizes/',
         (_, textResponse) => {
           expect(textResponse).to.have.string('count');
           expect(textResponse).to.have.string('results');

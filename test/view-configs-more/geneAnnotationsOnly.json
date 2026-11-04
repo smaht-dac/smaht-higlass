@@ -1,7 +1,7 @@
 {
   "editable": true,
   "zoomFixed": false,
-  "trackSourceServers": ["/api/v1", "http://higlass.io/api/v1"],
+  "trackSourceServers": ["/api/v1", "https://higlass.io/api/v1"],
   "exportViewUrl": "/api/v1/viewconfs/",
   "views": [
     {
@@ -14,7 +14,7 @@
             "width": 1173,
             "contents": [
               {
-                "server": "http://higlass.io/api/v1",
+                "server": "https://higlass.io/api/v1",
                 "tilesetUid": "NyITQvZsS_mOFNlz5C2LJg",
                 "uid": "YbYGI4JMSv-gkTPzL01pXQ",
                 "type": "horizontal-chromosome-labels",
@@ -53,7 +53,7 @@
             "width": 1173,
             "contents": [
               {
-                "server": "http://higlass.io/api/v1",
+                "server": "https://higlass.io/api/v1",
                 "tilesetUid": "P0PLbQMwTYGy-5uPIQid7A",
                 "uid": "genes1",
                 "type": "horizontal-gene-annotations",

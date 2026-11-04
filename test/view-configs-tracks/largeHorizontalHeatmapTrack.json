@@ -1,7 +1,7 @@
 {
   "filetype": "cooler",
   "name": "Rao et al. (2014) GM12878 MboI (allreps) 1kb",
-  "server": "http://higlass.io/api/v1",
+  "server": "https://higlass.io/api/v1",
   "tilesetUid": "CQMd6V_cRw6iCI_-Unl3PQ",
   "uid": "hhl1",
   "type": "horizontal-heatmap",

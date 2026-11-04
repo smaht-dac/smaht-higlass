@@ -499,7 +499,7 @@ const viewConf1 = {
           {
             uid: 'genes',
             tilesetUid: 'OHJakQICQD6gTD7skx4EWA',
-            server: 'http://higlass.io/api/v1',
+            server: 'https://higlass.io/api/v1',
             type: 'horizontal-gene-annotations',
             height: 48,
             options: {
@@ -528,7 +528,7 @@ const viewConf1 = {
             tilesetUid: 'PjIJKXGbSNCalUZO21e_HQ',
             height: 20,
             width: 793,
-            server: 'http://higlass.io/api/v1',
+            server: 'https://higlass.io/api/v1',
             type: 'horizontal-vector-heatmap',
             options: {
               name: 'GM12878-E116-H3K27ac.fc.signal',
@@ -623,9 +623,9 @@ const viewConf1 = {
       genomePositionSearchBoxVisible: false,
       genomePositionSearchBox: {
         visible: true,
-        chromInfoServer: 'http://higlass.io/api/v1',
+        chromInfoServer: 'https://higlass.io/api/v1',
         chromInfoId: 'hg19',
-        autocompleteServer: 'http://higlass.io/api/v1',
+        autocompleteServer: 'https://higlass.io/api/v1',
         autocompleteId: 'OHJakQICQD6gTD7skx4EWA',
       },
     },
@@ -638,7 +638,7 @@ const viewConf1 = {
     locksByViewUid: {},
     locksDict: {},
   },
-  trackSourceServers: ['http://higlass.io/api/v1'],
+  trackSourceServers: ['https://higlass.io/api/v1'],
   locationLocks: {
     locksByViewUid: {
       aa: 'PkNgAl3mSIqttnSsCewngw',

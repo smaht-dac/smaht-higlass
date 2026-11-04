@@ -131,13 +131,13 @@ describe('fillInMinWidths', () => {
         {
           uid: '1',
           type: 'horizontal-line',
-          server: 'http://higlass.io/api/v1',
+          server: 'https://higlass.io/api/v1',
           tilesetUid: 'F2vbUeqhS86XkxuO1j2rPA',
         },
         {
           uid: '3',
           type: 'horizontal-line',
-          server: 'http://higlass.io/api/v1',
+          server: 'https://higlass.io/api/v1',
           tilesetUid: 'F2vbUeqhS86XkxuO1j2rPA',
           options: {
             minHeight: 100,
@@ -148,13 +148,13 @@ describe('fillInMinWidths', () => {
         {
           uid: '2',
           type: 'vertical-line',
-          server: 'http://higlass.io/api/v1',
+          server: 'https://higlass.io/api/v1',
           tilesetUid: 'F2vbUeqhS86XkxuO1j2rPA',
         },
         {
           uid: '4',
           type: 'vertical-line',
-          server: 'http://higlass.io/api/v1',
+          server: 'https://higlass.io/api/v1',
           tilesetUid: 'F2vbUeqhS86XkxuO1j2rPA',
           options: {
             minWidth: 100,
@@ -170,7 +170,7 @@ describe('fillInMinWidths', () => {
         "left": [],
         "right": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "F2vbUeqhS86XkxuO1j2rPA",
             "type": "vertical-line",
             "uid": "2",
@@ -180,7 +180,7 @@ describe('fillInMinWidths', () => {
             "options": {
               "minWidth": 100,
             },
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "F2vbUeqhS86XkxuO1j2rPA",
             "type": "vertical-line",
             "uid": "4",
@@ -190,7 +190,7 @@ describe('fillInMinWidths', () => {
         "top": [
           {
             "height": 20,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "F2vbUeqhS86XkxuO1j2rPA",
             "type": "horizontal-line",
             "uid": "1",
@@ -200,7 +200,7 @@ describe('fillInMinWidths', () => {
             "options": {
               "minHeight": 100,
             },
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "F2vbUeqhS86XkxuO1j2rPA",
             "type": "horizontal-line",
             "uid": "3",

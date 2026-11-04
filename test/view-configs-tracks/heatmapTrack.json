@@ -1,7 +1,7 @@
 {
   "filetype": "cooler",
   "name": "Dixon et al. (2015) H1_TB HindIII (allreps) 1kb",
-  "server": "http://higlass.io/api/v1",
+  "server": "https://higlass.io/api/v1",
   "tilesetUid": "B2LevKBtRNiCMX372rRPLQ",
   "uid": "heatmap3",
   "type": "heatmap",

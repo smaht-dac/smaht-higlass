@@ -16,7 +16,7 @@ describe('HiGlass component creation tests', () => {
 
   it('Ensures that the viewconf state is editable', async () => {
     const response = await fetch(
-      'http://higlass.io/api/v1/viewconfs/?d=default',
+      'https://higlass.io/api/v1/viewconfs/?d=default',
     );
     const [div, hgc] = await mountHGComponentAsync(
       null,

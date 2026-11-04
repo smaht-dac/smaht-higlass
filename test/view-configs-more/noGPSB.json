@@ -1,8 +1,8 @@
 {
   "editable": true,
   "zoomFixed": false,
-  "trackSourceServers": ["http://higlass.io/api/v1"],
-  "exportViewUrl": "http://higlass.io/api/v1/viewconfs/",
+  "trackSourceServers": ["https://higlass.io/api/v1"],
+  "exportViewUrl": "https://higlass.io/api/v1/viewconfs/",
   "views": [
     {
       "uid": "aa",
@@ -11,7 +11,7 @@
       "tracks": {
         "top": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "GUm5aBiLRCyz2PsBea7Yzg",
             "uid": "e8H0Eve5TRWlc6XymPQejg",
             "type": "horizontal-gene-annotations",
@@ -31,7 +31,7 @@
             "tilesetUid": "PjIJKXGbSNCalUZO21e_HQ",
             "height": 20,
             "width": 843,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K27ac.fc.signal",
@@ -47,7 +47,7 @@
             "tilesetUid": "M-LTWpoGQ0iQvfJBtzXg4A",
             "height": 20,
             "width": 843,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "valueScaling": "linear",
@@ -62,7 +62,7 @@
             "tilesetUid": "JBs7pPAXQjOySJcct2jN4w",
             "height": 20,
             "width": 843,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "valueScaling": "linear",

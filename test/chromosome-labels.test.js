@@ -70,7 +70,7 @@ const viewconf = {
         left: [],
         top: [
           {
-            server: 'http://higlass.io/api/v1',
+            server: 'https://higlass.io/api/v1',
             tilesetUid: 'N12wVGG9SPiTkk03yUayUw',
             uid: 't1',
             type: 'horizontal-chromosome-labels',
@@ -96,9 +96,9 @@ const viewconf = {
       chromInfoPath: '//s3.amazonaws.com/pkerp/data/hg19/chromSizes.tsv',
       genomePositionSearchBox: {
         visible: true,
-        chromInfoServer: 'http://higlass.io/api/v1',
+        chromInfoServer: 'https://higlass.io/api/v1',
         chromInfoId: 'hg19',
-        autocompleteServer: 'http://higlass.io/api/v1',
+        autocompleteServer: 'https://higlass.io/api/v1',
         autocompleteId: 'OHJakQICQD6gTD7skx4EWA',
       },
     },
@@ -107,5 +107,5 @@ const viewconf = {
   viewEditable: true,
   tracksEditable: true,
   exportViewUrl: '/api/v1/viewconfs',
-  trackSourceServers: ['http://higlass.io/api/v1'],
+  trackSourceServers: ['https://higlass.io/api/v1'],
 };

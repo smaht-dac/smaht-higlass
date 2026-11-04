@@ -1,7 +1,7 @@
 {
   "editable": false,
   "trackSourceServers": ["/api/v1"],
-  "exportViewUrl": "http://higlass.io/api/v1/viewconfs/",
+  "exportViewUrl": "https://higlass.io/api/v1/viewconfs/",
   "chromInfoPath": "https://hgs.vcg.rc.fas.harvard.edu/api/v1/chrom-sizes/?id=hg19&type=json&cum=1",
   "views": [
     {
@@ -9,7 +9,7 @@
       "zoomFixed": true,
       "initialXDomain": [2829728720, 2881033286],
       "initialYDomain": [2829728720, 2881033286],
-      "autocompleteSource": "http://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
+      "autocompleteSource": "https://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
       "genomePositionSearchBoxVisible": false,
       "chromInfoPath": "https://hgs.vcg.rc.fas.harvard.edu/api/v1/chrom-sizes/?id=hg19",
       "tracks": {
@@ -19,7 +19,7 @@
             "type": "horizontal-gene-annotations",
             "height": 60,
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "options": {
               "name": "Gene Annotations (hg19)",
               "minusStrandColor": "#999",
@@ -1727,7 +1727,7 @@
       "zoomFixed": false,
       "initialXDomain": [2829728720, 2881033286],
       "initialYDomain": [2829728720, 2881033286],
-      "autocompleteSource": "http://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
+      "autocompleteSource": "https://higlass.io/api/v1/suggest/?d=OHJakQICQD6gTD7skx4EWA&",
       "genomePositionSearchBoxVisible": true,
       "chromInfoPath": "https://hgs.vcg.rc.fas.harvard.edu/api/v1/chrom-sizes/?id=hg19",
       "tracks": {
@@ -1737,7 +1737,7 @@
             "type": "horizontal-gene-annotations",
             "height": 60,
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "options": {
               "name": "Gene Annotations (hg19)",
               "minusStrandColor": "#999",

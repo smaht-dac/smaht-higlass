@@ -14,7 +14,7 @@
             "width": 470
           },
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "Nn8aA4qbTnmaa-oGGbuE-A",
             "uid": "tt",
             "type": "horizontal-bar",
@@ -52,7 +52,7 @@
             "type": "combined",
             "contents": [
               {
-                "server": "http://higlass.io/api/v1",
+                "server": "https://higlass.io/api/v1",
                 "tilesetUid": "D_8CofpyQoCqDqeA-A6A4g",
                 "uid": "cc",
                 "type": "heatmap",
@@ -94,7 +94,7 @@
         ],
         "left": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "Nn8aA4qbTnmaa-oGGbuE-A",
             "uid": "ll",
             "type": "vertical-bar",
@@ -147,7 +147,7 @@
       "initialYDomain": [3519553.443225772, 3573333.8960611327]
     }
   ],
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "locationLocks": {
     "locksByViewUid": {},
     "locksDict": {}
@@ -156,7 +156,7 @@
     "locksByViewUid": {},
     "locksDict": {}
   },
-  "exportViewUrl": "http://higlass.io/api/v1/viewconfs",
+  "exportViewUrl": "https://higlass.io/api/v1/viewconfs",
   "valueScaleLocks": {
     "locksByViewUid": {},
     "locksDict": {}

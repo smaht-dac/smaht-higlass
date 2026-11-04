@@ -17,7 +17,7 @@
           {
             "uid": "genes",
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-gene-annotations",
             "height": 48,
             "options": {
@@ -39,7 +39,7 @@
             "uid": "line1",
             "tilesetUid": "PjIJKXGbSNCalUZO21e_HQ",
             "height": 20,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "valueScaling": "linear",
@@ -60,7 +60,7 @@
             "uid": "line2",
             "tilesetUid": "PdAaSdibTLK34hCw7ubqKA",
             "height": 20,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "valueScaling": "linear",
@@ -81,7 +81,7 @@
             "uid": "line3",
             "tilesetUid": "e0DYtZBSTqiMLHoaimsSpg",
             "height": 20,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "valueScaling": "linear",
@@ -102,7 +102,7 @@
             "uid": "line4",
             "tilesetUid": "cE0nGyd0Q_yVYSyBUe89Ww",
             "height": 20,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "valueScaling": "linear",
@@ -141,7 +141,7 @@
             "type": "combined",
             "contents": [
               {
-                "server": "http://higlass.io/api/v1",
+                "server": "https://higlass.io/api/v1",
                 "tilesetUid": "dVBREuC2SvO01uXYMUh2aQ",
                 "type": "heatmap",
                 "uid": "Yqetzqw6Qfy-hREAJhAXEA",
@@ -178,9 +178,9 @@
       "chromInfoPath": "//s3.amazonaws.com/pkerp/data/hg19/chromSizes.tsv",
       "genomePositionSearchBox": {
         "visible": true,
-        "chromInfoServer": "http://higlass.io/api/v1",
+        "chromInfoServer": "https://higlass.io/api/v1",
         "chromInfoId": "hg19",
-        "autocompleteServer": "http://higlass.io/api/v1",
+        "autocompleteServer": "https://higlass.io/api/v1",
         "autocompleteId": "OHJakQICQD6gTD7skx4EWA"
       },
       "zoomLimits": [3000000, 3000000000]
@@ -194,7 +194,7 @@
     "locksByViewUid": {},
     "locksDict": {}
   },
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "locationLocks": {
     "locksByViewUid": {},
     "locksDict": {}

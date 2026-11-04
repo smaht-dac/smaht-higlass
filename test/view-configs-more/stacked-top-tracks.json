@@ -17,7 +17,7 @@
           {
             "uid": "genes",
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-gene-annotations",
             "height": 64,
             "options": {
@@ -56,7 +56,7 @@
             "uid": "line1",
             "tilesetUid": "PjIJKXGbSNCalUZO21e_HQ",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K27ac.fc.signal",
@@ -79,7 +79,7 @@
             "uid": "line2",
             "tilesetUid": "PdAaSdibTLK34hCw7ubqKA",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K27me3.fc.signal",
@@ -102,7 +102,7 @@
             "uid": "line3",
             "tilesetUid": "e0DYtZBSTqiMLHoaimsSpg",
             "height": 48,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K4me1.fc.signal",
@@ -125,7 +125,7 @@
             "uid": "line4",
             "tilesetUid": "cE0nGyd0Q_yVYSyBUe89Ww",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K4me3.fc.signal",
@@ -148,7 +148,7 @@
             "uid": "line5",
             "tilesetUid": "cE0nGyd0Q_yVYSyBUe89Ww",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K4me3.fc.signal",
@@ -171,7 +171,7 @@
             "uid": "line6",
             "tilesetUid": "cE0nGyd0Q_yVYSyBUe89Ww",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K4me3.fc.signal",
@@ -194,7 +194,7 @@
             "uid": "line7",
             "tilesetUid": "PjIJKXGbSNCalUZO21e_HQ",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K27ac.fc.signal",
@@ -217,7 +217,7 @@
             "uid": "line8",
             "tilesetUid": "PdAaSdibTLK34hCw7ubqKA",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K27me3.fc.signal",
@@ -240,7 +240,7 @@
             "uid": "line9",
             "tilesetUid": "e0DYtZBSTqiMLHoaimsSpg",
             "height": 48,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K4me1.fc.signal",
@@ -263,7 +263,7 @@
             "uid": "line10",
             "tilesetUid": "cE0nGyd0Q_yVYSyBUe89Ww",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K4me3.fc.signal",
@@ -286,7 +286,7 @@
             "uid": "line11",
             "tilesetUid": "cE0nGyd0Q_yVYSyBUe89Ww",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K4me3.fc.signal",
@@ -309,7 +309,7 @@
             "uid": "line12",
             "tilesetUid": "cE0nGyd0Q_yVYSyBUe89Ww",
             "height": 64,
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "type": "horizontal-line",
             "options": {
               "name": "GM12878-E116-H3K4me3.fc.signal",
@@ -341,7 +341,7 @@
   ],
   "editable": false,
   "exportViewUrl": "/api/v1/viewconfs",
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "valueScaleLocks": {
     "locksByViewUid": {},
     "locksDict": {}

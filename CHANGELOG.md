@@ -1,5 +1,11 @@
 # Release notes
 
+## 2.5.0
+
+- Stop bundling Enzyme and its dependencies, which shrinks `hglib.min.js` by ~28% (~29% gzipped). `mountHGComponent` and `mountHGComponentAsync` are no longer exported from `hglib` or the plugin `utils`; they never worked outside the HiGlass test setup. `waitForTilesLoaded`, `waitForJsonComplete`, `waitForTransitionsFinished`, `changeOptions` and `removeHGComponent` are still exported
+- Upgrade `d3-brush`, `d3-drag` and `d3-selection` to v3, which removes the duplicate `d3-transition` and `d3-timer` copies from the bundle
+- Move `cheerio` to `devDependencies` (it's only used by Enzyme in tests)
+
 ## 2.4.0
 
 - Fix tracks not resizing when dragging their resize handle with React 18+ (`createRoot`), where batched `setState` calls caused `DraggableDiv` to report the old size

@@ -94,13 +94,12 @@ export {
 
 // We want to remove following lines eventually. However, we need these at the moment since
 // available-for-plugins.js complains about uninitialized objects due to the current cyclic dependencies.
+// Only the Enzyme-free helpers are re-exported, so that Enzyme isn't bundled.
 export {
   changeOptions,
   waitForJsonComplete,
   waitForTilesLoaded,
   waitForTransitionsFinished,
-  mountHGComponent,
-  mountHGComponentAsync,
   removeHGComponent,
-} from '../test-helpers';
+} from '../test-helpers/wait-helpers';
 export { default as trackUtils } from '../track-utils';

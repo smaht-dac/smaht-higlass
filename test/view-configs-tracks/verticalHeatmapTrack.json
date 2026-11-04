@@ -1,6 +1,6 @@
 {
   "name": "Rao et al. (2014) HUVEC MboI (allreps) 1kb",
-  "server": "http://higlass.io/api/v1",
+  "server": "https://higlass.io/api/v1",
   "tilesetUid": "JO9CouMTS_WKLnlYBRcw8A",
   "uid": "vh1",
   "type": "vertical-heatmap",

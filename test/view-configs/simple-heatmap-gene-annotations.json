@@ -1,7 +1,7 @@
 {
   "editable": true,
   "zoomFixed": false,
-  "trackSourceServers": ["http://higlass.io/api/v1"],
+  "trackSourceServers": ["https://higlass.io/api/v1"],
   "views": [
     {
       "uid": "a",
@@ -13,14 +13,14 @@
             "uid": "gene-annotations",
             "height": 60,
             "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "options": {}
           }
         ],
         "left": [],
         "center": [
           {
-            "server": "http://higlass.io/api/v1",
+            "server": "https://higlass.io/api/v1",
             "tilesetUid": "CQMd6V_cRw6iCI_-Unl3PQ",
             "type": "heatmap",
             "uid": "heatmap",
